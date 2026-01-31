@@ -8,9 +8,9 @@ APP_ICON = "💰"
 PAGE_LAYOUT = "centered"
 
 # Model and encoder paths
-MODEL_PATH = "models/final_model.joblib"
-ENCODER_PATH = "models/preprocessor.joblib"
-DATA_PATH = 'data/developers_data.csv'
+MODEL_PATH = "Salary+Prediction+System/models/final_model.joblib"
+ENCODER_PATH = "Salary+Prediction+System/models/preprocessor.joblib"
+DATA_PATH = 'Salary+Prediction+System/data/developers_data.csv'
 
 # UI styling
 PRIMARY_COLOR = "#4CAF50"
@@ -36,6 +36,7 @@ COUNTRIES = ['Ukraine', 'Netherlands', 'United States of America', 'United Kingd
 
 #Employment feature
 EMPLOYMENT = ['Employed', 'Independent contractor, freelancer, or self-employed']
+
 
 
 
