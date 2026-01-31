@@ -4,7 +4,7 @@ import plotly.express as px
 import streamlit as st
 
 def plot_visualization(df_country, salary_df, edlvl_df):
-    df_country['Country_grouped'] = df_country['Country'].apply(lambda x: 'Others' if count < threshold else x)
+    df_country['Country'] = df_country['Country'].apply(lambda x: 'Others' if df_country.count < threshold else x)
     
     # pie chart
     fig1 = px.pie(data_frame=df_country, names='Country_grouped', values='count', hover_data='count', 
@@ -42,6 +42,7 @@ def plot_visualization(df_country, salary_df, edlvl_df):
     fig5 = st.plotly_chart(fig5, use_container_width=True) # storing the pie chart
     
     return fig1, fig2, fig3, fig4, fig5
+
 
 
 
