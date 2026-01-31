@@ -6,6 +6,7 @@ import streamlit as st
 def plot_visualization(df_country, salary_df, edlvl_df):
     
     #pie chart
+    df_country = df_country[df_country['count'] >= 500]
     fig1 = px.pie(data_frame=df_country, names='Country', values='count', hover_data='count',
                   title='No of software developers from each country in 2025')
 
@@ -41,6 +42,7 @@ def plot_visualization(df_country, salary_df, edlvl_df):
     fig5 = st.plotly_chart(fig5, use_container_width=True) # storing the pie chart
     
     return fig1, fig2, fig3, fig4, fig5
+
 
 
 
