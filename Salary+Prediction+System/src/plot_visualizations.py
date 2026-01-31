@@ -4,12 +4,10 @@ import plotly.express as px
 import streamlit as st
 
 def plot_visualization(df_country, salary_df, edlvl_df):
-    # Step 1: Identify countries with fewer than 500 developers
-    small_countries = df_country[df_country['count'] < 500]['Country'].tolist()
-
-    # Step 2: Replace those country names with 'Others'
-    df_country['Country'] = df_country['Country'].apply(lambda x: 'Others' if x in small_countries else x)
-
+    threshold = 500
+    country_counts = df_country['Country'].value_counts()
+    df_country['Country_grouped'] = df_country['Country'].apply(lambda x: 'Others' if country_counts[x] < threshold else x)
+    
     # pie chart
     fig1 = px.pie(data_frame=df_country, names='Country', values='count', hover_data='count', 
                   title='No of software developers from each country in 2025')
@@ -46,6 +44,7 @@ def plot_visualization(df_country, salary_df, edlvl_df):
     fig5 = st.plotly_chart(fig5, use_container_width=True) # storing the pie chart
     
     return fig1, fig2, fig3, fig4, fig5
+
 
 
 
