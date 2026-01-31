@@ -15,5 +15,6 @@ def load_data():
     salary_df = salary_df.sort_values(by='Salary', ascending=False)
     salary_df['Salary'] = round(salary_df['Salary'], 2)
     country_df = pd.DataFrame(df['Country'].value_counts().reset_index())
-    
-    return df, salary_df, country_df
+    employment_df = pd.DataFrame(df['Employment'].value_counts().reset_index())
+
+    return df, salary_df, country_df, employment_df
