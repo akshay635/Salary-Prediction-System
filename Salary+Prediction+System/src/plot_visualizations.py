@@ -5,7 +5,7 @@ import streamlit as st
 
 def plot_visualization(df_country, salary_df, edlvl_df):
     # Step 1: Identify countries with fewer than 500 developers
-    small_countries = df_country[df_country['count'] < 500].Country
+    small_countries = df_country[df_country['count'] < 500]['Country'].tolist()
 
     # Step 2: Replace those country names with 'Others'
     df_country['Country'] = df_country['Country'].apply(lambda x: 'Others' if x in small_countries else x)
@@ -46,6 +46,7 @@ def plot_visualization(df_country, salary_df, edlvl_df):
     fig5 = st.plotly_chart(fig5, use_container_width=True) # storing the pie chart
     
     return fig1, fig2, fig3, fig4, fig5
+
 
 
 
