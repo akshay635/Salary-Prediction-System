@@ -11,7 +11,6 @@ def plot_visualization(df_country, salary_df, edlvl_df):
 
     fig1 = st.plotly_chart(fig1, use_container_width=True) # storing the pie chart
 
-    col1, col2 = st.columns(2)
     # bar chart for top 10 countries
     fig2 = px.bar(data_frame=salary_df.head(10), x='Salary', y='Country', color = 'Salary',
                   title='Top 10 Countries with the mean salary for software developers (in $) in 2025',
@@ -42,6 +41,7 @@ def plot_visualization(df_country, salary_df, edlvl_df):
     fig4 = st.plotly_chart(fig5, use_container_width=True) # storing the pie chart
     
     return fig1, fig2, fig3, fig4, fig5
+
 
 
 
