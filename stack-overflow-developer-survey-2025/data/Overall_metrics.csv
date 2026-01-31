@@ -1,5 +1,0 @@
-model,mean absolute error
-XGBoost Regression,42865.510413284974
-Logistic Regression,44358.338047225276
-Random Forest Regression,44663.523026215466
-Support Vector Regression,47151.537627181126
