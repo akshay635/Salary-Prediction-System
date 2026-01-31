@@ -41,12 +41,9 @@ def plot_visualization(df_country, salary_df, edlvl_df):
 
     fig4 = st.plotly_chart(fig5, use_container_width=True) # storing the pie chart
     
-    return fig1, fig4, fig5
+    return fig1, fig2, fig3, fig4, fig5
 
-    with col1:
-            return fig2
-    with col2:
-            return fig3
+
 
 
 
