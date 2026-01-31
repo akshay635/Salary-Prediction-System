@@ -1,3 +1,5 @@
+joblib
+json5
 pandas==2.3.3
 matplotlib==3.10.8                                 
 numpy==1.26.4                                                    
@@ -6,9 +8,8 @@ seaborn==0.13.2
 statsmodels==0.14.6                 
 streamlit==1.52.2 
 plotly==6.5.0                                                 
-xgboost==3.1.2     
-joblib==1.1.1
-json5
+xgboost==3.1.2
 
               
+
 
