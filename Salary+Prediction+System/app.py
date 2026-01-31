@@ -13,24 +13,25 @@ importlib.reload(config)
 # set page configuration
 # Subtitle: Predict your earnings with clean data and powerful machine learning models
 
-st.set_page_config(page_title=config.APP_TITLE, 
-                   page_icon=config.APP_ICON, 
+st.set_page_config(page_title=config.APP_TITLE, page_icon=config.APP_ICON, 
                    layout=config.PAGE_LAYOUT)
-
-# title
-st.markdown("""
-    <div style='text-align: center;'>
-        <h1>Smart Salary Estimator</h1>
-        <h4 style='color: gray;'>Predict your earnings with clean data and powerful ML models</h4>
-    </div>
-""", unsafe_allow_html=True)
 
 # page dropdown
 page = st.sidebar.selectbox('Select the option', config.PAGE)
 
 # condition filtering
 if page == "Predict":
+    # title
+    st.markdown("""
+    <div style='text-align: center;'>
+        <h1>Smart Salary Estimator</h1>
+        <h4 style='color: gray;'>Predict your earnings with clean data and powerful ML models</h4>
+    </div>
+    """, unsafe_allow_html=True)
     predict()
 else:
+    st.title("Explore the Data")
+    st.markdown("#### Dive into the global landscape of software developer salaries and demographics in 2025.")
     explore()
+
 
