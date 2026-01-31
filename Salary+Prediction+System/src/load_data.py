@@ -15,6 +15,8 @@ def load_data():
     salary_df = salary_df.sort_values(by='Salary', ascending=False)
     salary_df['Salary'] = round(salary_df['Salary'], 2)
     country_df = pd.DataFrame(df['Country'].value_counts().reset_index())
-    employment_df = pd.DataFrame(df['Employment'].value_counts().reset_index())
+    edlvl_df = pd.DataFrame(df.groupby('EdLevel')['Salary'].mean().reset_index())
+    edlvl_df = edlvl_df.sort_values(by='Salary', ascending=False)
+    edlvl_df['Salary'] = round(edlvl_df['Salary'], 2)
+    return df, salary_df, country_df, edlvl_df
 
-    return df, salary_df, country_df, employment_df
