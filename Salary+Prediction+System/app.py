@@ -24,6 +24,5 @@ page = st.sidebar.selectbox('Select the option', config.PAGE)
 # condition filtering
 if page == "Predict":
     predict()
-
 else:
     explore()
