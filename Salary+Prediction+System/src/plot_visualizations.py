@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+import pandas as pd
 import plotly.express as px
 import streamlit as st
 
@@ -42,6 +42,7 @@ def plot_visualization(df_country, salary_df, edlvl_df):
     fig5 = st.plotly_chart(fig5, use_container_width=True) # storing the pie chart
     
     return fig1, fig2, fig3, fig4, fig5
+
 
 
 
