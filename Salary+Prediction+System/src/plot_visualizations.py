@@ -3,7 +3,7 @@
 import plotly.express as px
 import streamlit as st
 
-def plot_visualization(df_country, salary_df):
+def plot_visualization(df_country, salary_df, employment_df):
     
     #pie chart
     fig1 = px.pie(data_frame=df_country, names='Country', values='count', hover_data='count',
@@ -31,6 +31,13 @@ def plot_visualization(df_country, salary_df):
                      color="Salary", color_continuous_scale="Viridis", title="Mean Salary by Country")
 
     fig4 = st.plotly_chart(fig4, use_container_width=True) # storing the choropleth plot
+
+    #pie chart
+    fig5 = px.pie(data_frame=employment_df, names='Employment', values='count', hover_data='count',
+                  title='Employment rate in 2025')
+
+    fig5 = st.plotly_chart(fig5, use_container_width=True) # storing the pie chart
     
-    return fig1, fig2, fig3, fig4
+    return fig1, fig2, fig3, fig4, fig5
+
 
