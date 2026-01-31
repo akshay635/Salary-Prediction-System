@@ -30,8 +30,13 @@ if page == "Predict":
     """, unsafe_allow_html=True)
     predict()
 else:
-    st.title("Explore the Data")
-    st.markdown("#### Dive into the global landscape of software developer salaries and demographics in 2025.")
+    st.markdown("""
+    <div style='text-align: center;'>
+        <h1>Explore the Data</h1>
+        <h4 style='color: gray;'>Dive into the global landscape of software developer salaries and demographics in 2025</h4>
+    </div>
+    """, unsafe_allow_html=True)
     explore()
+
 
 
