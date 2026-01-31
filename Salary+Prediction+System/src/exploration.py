@@ -6,9 +6,10 @@ from src.plot_visualizations import plot_visualization
 
 def explore():
     
-    df, salary_df, country_df = load_data()
+    df, salary_df, country_df, employment_df = load_data()
     
-    plot_visualization(country_df, salary_df)
+    plot_visualization(country_df, salary_df, employment_df)
     
     
+
     
