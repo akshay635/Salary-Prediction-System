@@ -1,5 +1,4 @@
-# Salary-Prediction-System
-Global Developer Salary Estimator (Regression ML System)
+# Global Developer Salary Estimator (Regression ML System)
 
 ~ Built end-to-end regression system to predict software developer salaries using Stack Overflow 2025 survey dataset.
 
